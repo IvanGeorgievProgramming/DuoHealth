@@ -15,7 +15,7 @@
     --bg-color: #fefefe;
     --second-bg-color: #f1f1f1;
     --text-color: #484848;
-    --main-color: #0bb17e;
+    --main-color: #2d94e8;
 }
 
 html{
@@ -205,11 +205,11 @@ span{
 
 .services-container .services-box{
     flex: 1 1 30rem;
-    background: var(--second-bg-color);
+    background: var(--bg-color);
     padding: 3rem 2rem 4rem;
     border-radius: 2rem;
     text-align: center;
-    border: .2rem solid var(--bg-color);
+    border: .2rem solid var(--second-bg-color);
     transition: .5s ease;
 }
 

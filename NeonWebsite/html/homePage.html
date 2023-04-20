@@ -8,7 +8,7 @@
     <title>Home</title>`
 
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="../css/style.css">
     
 </head>
 <body>
@@ -16,7 +16,8 @@
     <!--Navigation bar-->
 
     <header class="header">
-        <a href="#" class="logo">Data Exotica</a>
+        <img src="../images/logo.png" alt="" height="70", width="70">
+        <a href="#" class="logo">DuoHealth</a>
 
         <i class='bx bx-menu' id="menu-icon"></i>
 
@@ -34,7 +35,7 @@
     <section class="home" id="home">
         <div class="home-content">
             <h3>Hi, we are</h3>
-            <h1>Data Exotica</h1>
+            <h1>DuoHealth</h1>
             <h3>And we provide <span class="multiple-text"></span></h3>
             <p>This platform is build for...</p>
             <div class="social-media">
@@ -43,7 +44,7 @@
             <a href="#" class="btn">Get Started</a>
         </div>
         <div class="home-img">
-            <img src="images/home.png" width="500px">
+            <img src="../images/home.png" width="500px">
         </div>
     </section>
 
@@ -51,7 +52,7 @@
     
     <section class="about" id="about">
         <div class="about-img">
-            <img src="images/about.png" alt="">
+            <img src="../images/about.png" alt="">
         </div>
 
         <div class="about-content">
@@ -105,92 +106,31 @@
         </div>
     </section>
 
-    <!--Portfolio-->
-
-    <section class="portfolio" id="portfolio">
-        <h2 class="heading">Latest <span>Project</span></h2>
-
-        <div class="portfolio-container">
-            <div class="portfolio-box">
-                <img src="images/Portfolio.png" alt="">
-                <div class="portfolio-layer">
-                    <h4>Web design</h4>
-                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aut, ab!</p>
-                    <a href="#"><i class='bx bx-link-external' ></i></a>
-                </div>
-            </div>
-
-            <div class="portfolio-box">
-                <img src="images/Portfolio.png" alt="">
-                <div class="portfolio-layer">
-                    <h4>Web design</h4>
-                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aut, ab!</p>
-                    <a href="#"><i class='bx bx-link-external' ></i></a>
-                </div>
-            </div>
-
-            <div class="portfolio-box">
-                <img src="images/Portfolio.png" alt="">
-                <div class="portfolio-layer">
-                    <h4>Web design</h4>
-                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aut, ab!</p>
-                    <a href="#"><i class='bx bx-link-external' ></i></a>
-                </div>
-            </div>
-
-            <div class="portfolio-box">
-                <img src="images/Portfolio.png" alt="">
-                <div class="portfolio-layer">
-                    <h4>Web design</h4>
-                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aut, ab!</p>
-                    <a href="#"><i class='bx bx-link-external' ></i></a>
-                </div>
-            </div>
-
-            <div class="portfolio-box">
-                <img src="images/Portfolio.png" alt="">
-                <div class="portfolio-layer">
-                    <h4>Web design</h4>
-                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aut, ab!</p>
-                    <a href="#"><i class='bx bx-link-external' ></i></a>
-                </div>
-            </div>
-
-            <div class="portfolio-box">
-                <img src="images/Portfolio.png" alt="">
-                <div class="portfolio-layer">
-                    <h4>Web design</h4>
-                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aut, ab!</p>
-                    <a href="#"><i class='bx bx-link-external' ></i></a>
-                </div>
-            </div>
-        </div>
-    </section>
 
     <!--Contact-->
 
     <section class="contact" id="contact">
         <h2 class="heading">Contact <span>Us!</span></h2>
 
-        <form action="#">
+        <form action="../php/send-email.php" method="post">
             <div class="input-box">
-                <input type="text" placeholder="Full Name">
-                <input type="email" placeholder="Email Address">
+                <input type="text" placeholder="Full Name" name="name">
+                <input type="email" placeholder="Email Address" name="email">
             </div>
             <div class="input-box">
-                <input type="number" placeholder="Mobile Number">
-                <input type="text" placeholder="Email Subject">
+                <input type="number" placeholder="Mobile Number" name="phone">
+                <input type="text" placeholder="Email Subject" name="subject">
             </div>
-            <textarea name="" id="" cols="30" rows="10" placeholder="Your Message"></textarea>
+            <textarea name="message" cols="30" rows="10" placeholder="Your Message"></textarea>
             <input type="submit" value="Send Message" class="btn">
-        </form>
+            </form>
     </section>
 
     <!--Footer-->
 
     <footer class="footer">
         <div class="footer-text">
-            <p>This is the project of team "Exotic" for the ninth edition of Hack Tues.</p>
+            <p>This is the website of team "Point" for Teenovator.</p>
         </div>
 
         <div class="footer-iconTop">
@@ -210,6 +150,6 @@
     
     <!--Javascript-->
 
-    <script src="js/script.js"></script>
+    <script src="../js/script.js"></script>
 </body>
 </html>
