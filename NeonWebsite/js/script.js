@@ -53,7 +53,7 @@ ScrollReveal().reveal('.home-content p, .about-content', {origin: 'right'});
 
 /* Multiple Text */
 const typed = new Typed('.multiple-text', {
-    strings:["Health", "Password manager", "Link checker", "DNS Lookup"],
+    strings:["AI Diagnosis", "Doctor contacts", "Duo-Med"],
     typeSpeed: 100,
     backSpeed: 100,
     backDelay: 1000,
