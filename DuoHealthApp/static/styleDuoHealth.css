@@ -601,11 +601,61 @@ span{
 }
 
 @media (max-width: 991px){
-    .header{
-        padding: 2rem 3%;
+    header{
+        padding: 20px;
     }
 
-    section{
+    header label{
+        display: initial;
+    }
+
+    #menu-bar:checked ~ label i:before{
+        content: "\f00d";
+    }
+
+    header .navbar{
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background-color: var(--bg-color);
+        border-top: 1px solid var(--second-bg-color);
+        display: none;
+    }
+
+    header .navbar ul li{
+        width: 100%;
+    }
+
+    header .navbar ul li:hover > ul{
+        display: block;
+    }
+
+    header .navbar ul li ul{
+        position: relative;
+        width: 100%;
+    }
+
+    header .navbar ul li ul li{
+        background-color: var(--second-bg-color);
+        border-bottom: 1px solid var(--bg-color);
+    }
+
+    #menu-bar:checked ~ .navbar{
+        display: initial;
+    }
+
+    header .navbar ul li a.logout{
+        margin-left: 0rem;
+    }
+
+    header .navbar ul li ul.drpdwn{
+        display: inline;
+    }
+
+    
+
+    section .cht{
         padding: 10rem 3% 2rem;
     }
 
@@ -624,34 +674,63 @@ span{
     .footer{
         padding: 2rem 3%;
     }
+
+    .chatbox__support{
+        width: 720px;
+        height: 600px;
+    }
+
 }
 
 @media (max-width: 768px){
-    #menu-icon{
-        display: block;
+    header{
+        padding: 10px;
     }
 
-    .navbar{
+    header label{
+        display: initial;
+    }
+
+    #menu-bar:checked ~ label i:before{
+        content: "\f00d";
+    }
+
+    header .navbar{
         position: absolute;
         top: 100%;
         left: 0;
-        width: 100%;
-        padding: 1rem 3%;
-        background: var(--bg-color);
-        border-top: .1rem solid rgba(0, 0, 0, 0.2);
-        box-shadow: 0 .5rem 1rem rgba(0, 0, 0, 0.2);
+        right: 0;
+        background-color: var(--bg-color);
+        border-top: 1px solid var(--second-bg-color);
         display: none;
     }
 
-    .navbar.active{
+    header .navbar ul li{
+        width: 100%;
+    }
+
+    header .navbar ul li:hover > ul{
         display: block;
     }
 
-    .navbar a{
-        display: block;
-        font-size: 2rem;
-        margin: 3rem 0;
+    header .navbar ul li:focus-within > ul{
+        display: initial;
     }
+
+    header .navbar ul li ul{
+        position: relative;
+        width: 100%;
+    }
+
+    header .navbar ul li ul li{
+        background-color: var(--second-bg-color);
+        border-bottom: 1px solid var(--bg-color);
+    }
+
+    #menu-bar:checked ~ .navbar{
+        display: initial;
+    }
+
 
     .home{
         flex-direction: column;
@@ -690,11 +769,19 @@ span{
     .portfolio-container{
         grid-template-columns: repeat(2, 1fr);
     }
+
+    .chatbox__support{
+        width: 580px;
+    }
 }
 
 @media (max-width: 617px){
     .portfolio-container{
         grid-template-columns: 1fr;
+    }
+
+    .chatbox__support{
+        width: 420px;
     }
 }
 
@@ -705,6 +792,10 @@ span{
 
     .contact form .input-box input{
         width: 100%;
+    }
+
+    .chatbox__support{
+        width: 330px;
     }
 }
 
@@ -724,5 +815,10 @@ span{
     .footer p{
         text-align: center;
         margin-top: 2rem;
+    }
+
+    .chatbox__support{
+        width: 300px;
+        height: 570px;
     }
 }
