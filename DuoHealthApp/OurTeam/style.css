@@ -7,13 +7,13 @@
 }
 
 body{
-    background: #333;
+    background: #ffffff;
 }
 
 h1{
     font-size: 40px;
     margin-top: 20px;
-    color: #e74c3c;
+    color: #0BB17E;
     text-align: center;
 }
 
@@ -31,7 +31,7 @@ h1{
     border-radius: 10px;
     overflow: hidden;
     text-align: center;
-    background-color: #222;
+    background-color: #f1f1f1;
 }
 
 .card .bg-image img{
@@ -45,7 +45,7 @@ h1{
     width: 120px;
     height: 120px;
     border-radius: 50%;
-    border: 10px solid #222;
+    border: 10px solid #f1f1f1;
     margin-top: -90px;
     position: relative;
 }
@@ -58,23 +58,11 @@ h1{
 
 .card .info span{
     font-size: 15px;
-    color: #e74c3c;
+    color: #0BB17E;
 }
 
 .card .info p{
     font-size: 13px;
     padding:10px 20px;
     color: #999;
-}
-
-.card.info .icons a{
-    font-size: 20px;
-    text-decoration: none;
-    color: #e74c3c;
-    margin-top: 20px;
-    padding: 0 5px;
-}
-
-.card.info .icons a:hover{
-    color:#f0f0f0; 
 }
