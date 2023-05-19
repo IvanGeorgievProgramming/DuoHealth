@@ -541,12 +541,14 @@ span{
     height: 35px;
     border-radius: 35px;
     align-items: center;
+    margin-left: 8px;
 }
 
 .chatbox__send--footer i {
     color: var(--bg-color);
     font-size: 2rem;
     margin-left: 8px;
+    margin-right: 8px;
     margin-top: 8px;
 }
 
