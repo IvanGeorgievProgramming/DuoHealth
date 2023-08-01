@@ -124,14 +124,38 @@ class Item(db.Model):
 # ********** Routes ********** #
 
 # Landing page
-@app.route('/')
-@app.route('/landing')
+@app.route('/', methods= ['POST', 'GET'])
+@app.route('/landing', methods= ['POST', 'GET'])
 def home():
-    email = session.get('email')
-    if email:
-        return redirect(url_for('Index'))
-    newsapi = NewsApiClient(api_key= os.getenv('NEWS_API_KEY'))
-    topheadlines = newsapi.get_everything(q='cybersecurity', language='en', sort_by = 'publishedAt', page_size=5)
+    # email = session.get('email')
+    # if email:
+    #     return redirect(url_for('Index'))
+    # newsapi = NewsApiClient(api_key= os.getenv('NEWS_API_KEY'))
+    # topheadlines = newsapi.get_everything(q='cybersecurity', language='en', sort_by = 'publishedAt', page_size=5)
+                                        
+    # articles = topheadlines['articles']
+
+    # desc = []
+    # news = []
+    # link = []
+    # img = []
+
+    # for i in range(len(articles)):
+    #     myarticles = articles[i]
+
+    #     news.append(myarticles['title'])
+    #     desc.append(myarticles['content'])
+    #     img.append(myarticles['urlToImage'])
+    #     link.append(myarticles['url'])
+
+    # mylist = zip(news, desc, link, img)
+
+    # return render_template('landing.html', context = mylist)
+
+    user = User.query.get(4) #! Get Current User id
+
+    newsapi = NewsApiClient(api_key=os.environ.get('NEWS_API_KEY'))
+    topheadlines = newsapi.get_everything(q='healthcare, medicine, articles', language='en', sort_by = 'publishedAt', page_size=6)
                                         
     articles = topheadlines['articles']
 
@@ -150,7 +174,16 @@ def home():
 
     mylist = zip(news, desc, link, img)
 
-    return render_template('landing.html', context = mylist)
+    if request.method == 'POST':
+        question = request.form.get('question')
+        if not question:
+            return render_template('home.html', context = mylist, user = user)
+        answer = get_answer(question)
+        if question and answer:
+            return render_template('home.html', question = question, answer=answer, context = mylist, user = user)
+    else :return render_template('home.html', context = mylist, user = user)
+
+    return render_template('home.html', context = mylist, user = user)
 
 # Register page
 @app.route('/register', methods = ["POST", "GET"])

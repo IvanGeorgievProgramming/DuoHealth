@@ -8,6 +8,11 @@
         <a href="#about">About</a>
         <a href="#services">Services</a>
         <a href="#portfolio">News</a>
-        <a href="{{url_for('left')}}" class="login">Log out</a>
+        <!-- If the user is logged make a logout button, but if the user is not make a login button -->
+        {% if session['logged_in'] %}
+            <a href="{{url_for('left')}}" class="login">Log out</a>
+        {% else %}
+            <a href="{{url_for('login')}}" class="login">Log in</a>
+        {% endif %}
     </nav>
 </header>
